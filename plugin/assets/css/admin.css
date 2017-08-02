@@ -1,0 +1,35 @@
+@import "button.css";
+.compmodule_table tr th {
+    padding: 15px 0 5px;
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.compmodule_table tr td input[type="text"] {
+    padding-right: 16px;
+    background: white url(../gfx/copy.png) 99% 50% no-repeat;
+    cursor: pointer;
+}
+
+.compmodule_website_name {
+    text-align: right;
+}
+
+.compmodule_drop_cache {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 16px;
+    height: 16px;
+    background: transparent url(../gfx/refresh.png) center center no-repeat;
+    vertical-align: bottom;
+}
+
+.compmodule_drop_cache.working {
+    background-image: url(../gfx/wait.gif);
+}
+
+.compmodule_drop_cache:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

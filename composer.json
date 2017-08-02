@@ -1,0 +1,27 @@
+{
+  "name": "getherbert/herbert",
+  "description": "Herbert",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "require": {
+    "composer/installers": "1.0.*",
+    "twig/twig": "1.16.*",
+    "komparu/php-client": "dev-master"
+  },
+  "autoload": {
+    "classmap": [
+      "framework",
+      "plugin/controllers",
+      "plugin/models",
+      "plugin/widgets",
+      "plugin/processors",
+      "plugin/helpers"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:komparu/php-client.git"
+    }
+  ]
+}

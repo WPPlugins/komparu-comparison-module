@@ -1,0 +1,13 @@
+{
+	"name": "komparu/php-client",
+	"description": "The Komparu PHP REST client",
+	"keywords": [],
+	"license": "MIT",
+	"require": {
+		"guzzlehttp/guzzle": "~4.2"
+	},
+	"autoload": {
+        "psr-4": {"Komparu\\PhpClient\\": "src/"}
+	},
+	"minimum-stability": "dev"
+}

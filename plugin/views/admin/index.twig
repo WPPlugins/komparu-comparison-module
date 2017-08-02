@@ -1,0 +1,25 @@
+<h2>Komparu</h2>
+{% set product_type = '' %}
+<table class="compmodule_table">
+    {% for website in websites %}
+        {% if product_type != website.product_type.name %}
+            {% set product_type = website.product_type.name %}
+            <tr>
+                <th colspan="2">{{ website.product_type.title }}</th>
+            </tr>
+        {% endif %}
+        <tr>
+            <td class="compmodule_website_name" width="50%">
+                <label for="compmodule_{{ website.id }}">{{ website.name }}</label>
+                <a href="#" class="compmodule_drop_cache" data-token="{{ website.url_identifier }}"></a>
+            </td>
+            <td width="50%"><input id="compmodule_{{ website.id }}" type="text" size="60" readonly="readonly"
+                                   title="Copy to clipboard"
+                                   value="[compmodule token='{{ website.url_identifier }}']"/></td>
+        </tr>
+    {% else %}
+        <tr>
+            <td>No websites have been found</td>
+        </tr>
+    {% endfor %}
+</table>
